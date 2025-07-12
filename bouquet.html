@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bouquets ‑ GALO</title>
+
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body{
+      font-family:'Montserrat',sans-serif;
+      background:#fafafa;
+      padding:20px;
+      text-align:center;
+    }
+    h1{
+      font-family:'Playfair Display',serif;
+      font-weight:700;
+      color:#b17f50;
+      margin-bottom:30px;
+    }
+
+    /* CUADRÍCULA 3×N */
+    .catalogo{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:32px;
+      margin-top:30px;
+    }
+    .item{
+      width:260px;            /* un ancho fijo */
+    }
+
+    /* Imágenes uniformes */
+    .item img{
+      width:100%;
+      height:190px;
+      object-fit:cover;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,.1);
+    }
+
+    h2{
+      font-family:'Playfair Display',serif;
+      font-weight:700;
+      margin:10px 0 5px;
+      color:#222;
+      font-size:1.2em;
+    }
+    h3{
+      margin:0;
+      color:#666;
+      font-size:1em;
+    }
+
+    /* Botón volver */
+    .boton-regreso{
+      display:inline-block;
+      margin-bottom:25px;
+      padding:10px 18px;
+      background:#d4a373;
+      color:#fff;
+      text-decoration:none;
+      border-radius:8px;
+      font-weight:600;
+    }
+    .boton-regreso:hover{background:#b17f50}
+  </style>
+</head>
+<body>
+
+  <a class="boton-regreso" href="index.html">← Volver al inicio</a>
+  <h1>Bouquets</h1>
+
+  <div class="catalogo">
+
+    <div class="item">
+      <img src="b1.jpg" alt="Elegancia Azul">
+      <h2>Elegancia Azul</h2>
+      <h3>$1,800 MXN</h3>
+    </div>
+
+    <div class="item">
+      <img src="b2.jpg" alt="Delphinium">
+      <h2>Delphinium</h2>
+      <h3>$2,000 MXN</h3>
+    </div>
+
+    <div class="item">
+      <img src="b3.jpg" alt="Ocasión">
+      <h2>Ocasión</h2>
+      <h3>$1,800 MXN</h3>
+    </div>
+
+    <div class="item">
+      <img src="b4.jpg" alt="Candy">
+      <h2>Candy</h2>
+      <h3>$2,600 MXN</h3>
+    </div>
+
+    <div class="item">
+      <img src="b5.jpg" alt="Mar de Sol">
+      <h2>Mar de Sol</h2>
+      <h3>$1,800 MXN</h3>
+    </div>
+
+  </div>
+</body>
+</html>
