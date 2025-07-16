@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bouquets - GALO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family:'Montserrat',sans-serif; background:#fafafa; padding:20px; text-align:center; color:#2e2e2e }
+    h1 { font-family:'Playfair Display',serif; font-weight:700; color:#b17f50; margin-bottom:30px }
+    .catalogo { display:flex; flex-wrap:wrap; justify-content:center; gap:32px; margin-top:30px }
+    .item { width:260px; margin-bottom:30px }
+    .item img { width:100%; height:190px; object-fit:cover; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.1) }
+    h2 { font-family:'Playfair Display',serif; font-weight:700; margin:10px 0 5px; color:#222; font-size:1.2em }
+    h3 { margin:0; color:#666; font-size:1em }
+    .boton-regreso, button, .finalizar {
+      display:inline-block; margin-top:10px; padding:10px 18px; background:#d4a373; color:#fff;
+      text-decoration:none; border:none; border-radius:8px; font-weight:600; cursor:pointer;
+    }
+    .boton-regreso:hover, button:hover, .finalizar:hover { background:#b17f50 }
+    #carrito { margin-top:40px; background:#fff; padding:20px; border-radius:12px; max-width:600px; margin-left:auto; margin-right:auto; box-shadow:0 4px 12px rgba(0,0,0,.1); text-align:left }
+    #carrito h2 { text-align:center; color:#b17f50 }
+    #carrito ul { list-style:none; padding:0 }
+    #carrito li { padding:6px 0; border-bottom:1px solid #ddd }
+  </style>
+</head>
+<body>
+
+  <a class="boton-regreso" href="index.html">← Volver al inicio</a>
+  <h1>Bouquets</h1>
+
+  <div class="catalogo">
+    <div class="item">
+      <img src="b1.jpg" alt="Elegancia Azul">
+      <h2>Elegancia Azul</h2>
+      <h3>$1,800 MXN</h3>
+      <button onclick="agregarAlCarrito('Elegancia Azul - $1,800 MXN')">Agregar al carrito</button>
+    </div>
+    <div class="item">
+      <img src="b3.jpg" alt="Ocasión">
+      <h2>Ocasión</h2>
+      <h3>$1,800 MXN</h3>
+      <button onclick="agregarAlCarrito('Ocasión - $1,800 MXN')">Agregar al carrito</button>
+    </div>
+    <div class="item">
+      <img src="b5.jpg" alt="Mar de Sol">
+      <h2>Mar de Sol</h2>
+      <h3>$1,800 MXN</h3>
+      <button onclick="agregarAlCarrito('Mar de Sol - $1,800 MXN')">Agregar al carrito</button>
+    </div>
+    <div class="item">
+      <img src="b2.jpg" alt="Delphinium">
+      <h2>Delphinium</h2>
+      <h3>$2,000 MXN</h3>
+      <button onclick="agregarAlCarrito('Delphinium - $2,000 MXN')">Agregar al carrito</button>
+    </div>
+    <div class="item">
+      <img src="b4.jpg" alt="Candy">
+      <h2>Candy</h2>
+      <h3>$2,600 MXN</h3>
+      <button onclick="agregarAlCarrito('Candy - $2,600 MXN')">Agregar al carrito</button>
+    </div>
+  </div>
+
+  <div id="carrito">
+    <h2>Carrito de Compras</h2>
+    <ul id="lista-carrito"></ul>
+    <a class="finalizar" href="pago.html">Finalizar pedido</a>
+  </div>
+
+  <script>
+    function agregarAlCarrito(producto) {
+      const lista = document.getElementById("lista-carrito");
+      const item = document.createElement("li");
+      item.textContent = producto;
+      lista.appendChild(item);
+    }
+  </script>
+
+</body>
+</html>

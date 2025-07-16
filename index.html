@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Arreglos Florales GALO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Íconos Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-main:#f5f7fa;
+      --bg-banner:#fff;
+      --bg-card:#fff;
+      --bg-card-alt:#fafbfc;
+      --clr-primary:#d4a373;
+      --clr-primary-dk:#b17f50;
+      --clr-text:#2e2e2e;
+      --clr-muted:#6d6d6d;
+      --shadow-lg:0 8px 22px rgba(0,0,0,.08);
+      --shadow-sm:0 2px 8px rgba(0,0,0,.05);
+      --radius-md:14px;
+      --radius-full:50%;
+      --transition:.25s ease;
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:'Montserrat', 'Open Sans', sans-serif;
+      background:var(--bg-main);
+      color:var(--clr-text);
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+    }
+    h1,h2{
+      font-family:'Playfair Display',serif;
+      font-weight:700;
+      margin:0 0 .6em;
+    }
+    a{text-decoration:none;color:inherit;transition:color var(--transition)}
+
+    /* Topbar */
+    .topbar{
+      position:fixed;top:0;left:0;width:100%;z-index:1000;
+      background:#fff;box-shadow:var(--shadow-sm);
+      backdrop-filter:saturate(180%) blur(10px);
+    }
+    .topbar-inner{
+      max-width:1200px;margin:auto;
+      display:flex;align-items:center;justify-content:space-between;
+      padding:14px 24px;
+    }
+    .logo-group{
+      display:flex;align-items:center;font-family:'Playfair Display',serif;
+    }
+    .logo-group img{
+      height:44px;width:44px;border-radius:var(--radius-full);
+      object-fit:cover;margin-right:10px;
+    }
+    .logo-group span{font-size:1.75rem;font-weight:700;color:var(--clr-primary-dk)}
+    .nav a{
+      margin:0 10px;font-weight:600;color:var(--clr-muted);position:relative;
+    }
+    .nav a::after{
+      content:'';position:absolute;left:0;bottom:-4px;width:0;height:3px;
+      background:var(--clr-primary);border-radius:2px;transition:width var(--transition);
+    }
+    .nav a:hover{color:var(--clr-primary-dk)}
+    .nav a:hover::after{width:100%}
+    .spacer{height:88px}
+
+    /* Secciones */
+    .banner{
+      background:var(--bg-banner);text-align:center;
+      padding:48px 0 56px;box-shadow:var(--shadow-sm);
+    }
+    .banner img{
+      width:420px;max-width:92%;
+      border-radius:var(--radius-md);box-shadow:var(--shadow-lg);
+    }
+    .card{
+      background:var(--bg-card);border-radius:var(--radius-md);
+      padding:32px 28px;margin:36px auto;
+      width:90%;max-width:1200px;box-shadow:var(--shadow-lg);
+    }
+    .card-alt{background:var(--bg-card-alt)}
+
+    /* Catálogo */
+    .catalog{
+      display:flex;flex-wrap:wrap;justify-content:center;gap:32px;
+    }
+    .item{text-align:center;width:260px}
+    .item img{
+      width:190px;height:190px;border-radius:var(--radius-full);
+      object-fit:cover;box-shadow:var(--shadow-sm);
+      transition:transform var(--transition);
+    }
+    .item img:hover{transform:scale(1.04)}
+    .item b{display:block;margin:12px 0 6px;font-size:1.1em;font-weight:600}
+    .item a{
+      display:inline-block;margin-top:4px;padding:6px 14px;
+      background:var(--clr-primary);color:#fff;border-radius:8px;font-weight:600;
+      box-shadow:0 2px 6px rgba(0,0,0,.08);transition:background var(--transition);
+    }
+    .item a:hover{
+      background:var(--clr-primary-dk);box-shadow:0 4px 10px rgba(0,0,0,.12);
+    }
+
+    /* Responsive & footer */
+    @media (max-width:640px){
+      .topbar-inner{padding:12px 16px}
+      .banner img{width:72%}
+      .item{width:100%}
+    }
+    footer{
+      background:#ededed;text-align:center;font-size:.9em;
+      padding:20px 0;color:var(--clr-muted);margin-top:60px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- TOPBAR -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="logo-group">
+      <img src="galo.jpg" alt="Logo GALO">
+      <span>GALO</span>
+    </div>
+    <nav class="nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+      <a href="accesorios.html">Accesorios</a>
+      <a href="https://wa.me/525611274516">WhatsApp</a>
+    </nav>
+  </div>
+</header>
+<div class="spacer"></div>
+
+<!-- BANNER -->
+<a id="inicio"></a>
+<section class="banner">
+  <img src="galo.jpg" alt="Banner GALO">
+</section>
+
+<!-- FRASE -->
+<section class="card">
+  <div style="display:flex;flex-wrap:wrap;align-items:center;gap:30px">
+    <div style="flex:1;min-width:260px;font-size:1.45em">
+      <p><b>“Flores que hablan por ti”</b></p>
+      <p><b>“Arreglos únicos, momentos inolvidables”</b></p>
+    </div>
+    <div>
+      <img src="rojoaccesible.jpg" alt="Frase GALO" width="280" height="280"
+           style="border-radius:var(--radius-full);object-fit:cover;box-shadow:var(--shadow-sm)">
+    </div>
+  </div>
+</section>
+
+<!-- CATÁLOGO -->
+<a id="catalogo"></a>
+<section class="card">
+  <h2 style="text-align:center;color:var(--clr-text)">Catálogo de Arreglos</h2><br>
+  <div class="catalog">
+
+    <!-- Bouquet -->
+    <div class="item">
+      <img src="bouquet.jpg" alt="Bouquet">
+      <b>Bouquet</b>
+      <a href="bouquet.html">Ver más</a>
+    </div>
+
+    <!-- Caballero -->
+    <div class="item">
+      <img src="caballero.jpg" alt="Caballero">
+      <b>Para Caballero</b>
+      <a href="caballero.html">Ver más</a>
+    </div>
+
+    <!-- Eventos (ahora con portada.jpg) -->
+    <div class="item">
+      <img src="portada.jpg" alt="Eventos">
+      <b>Eventos</b>
+      <a href="eventos.html">Ver más</a>
+    </div>
+
+    <!-- Centros de mesa -->
+    <div class="item">
+      <img src="ceme.jpg" alt="Centros de mesa">
+      <b>Centros de mesa</b>
+      <a href="centros.html">Ver más</a>
+    </div>
+
+    <!-- Ocasión -->
+    <div class="item">
+      <img src="ocasion.jpg" alt="Ocasión">
+      <b>Arreglos de Ocasión</b>
+      <a href="ocasion.html">Ver más</a>
+    </div>
+
+    <!-- Accesorios (con eve1.jpg) -->
+    <div class="item">
+      <img src="eve1.jpg" alt="Accesorios">
+      <b>Accesorios</b>
+      <a href="accesorios.html">Ver más</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- NOSOTROS -->
+<a id="nosotros"></a>
+<section class="card card-alt">
+  <h2>¿Quiénes Somos?</h2>
+  <p><b>GALO</b> es una floristería en CDMX que transforma sentimientos en flores. Creamos diseños artesanales para toda ocasión.</p>
+  <p><b>Misión:</b> Llevar alegría con cada flor.</p>
+  <p><b>Valores:</b> Frescura, puntualidad, creatividad y pasión.</p>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="card">
+  <h2>Opiniones de Clientes</h2>
+  <p>“Mi pedido llegó perfecto y puntual. ¡Recomiendo mucho!” – <i>Ana M.</i></p>
+  <p>“Hice un pedido desde otra ciudad y todo salió increíble.” – <i>Carlos R.</i></p>
+</section>
+
+<!-- FAQ -->
+<section class="card card-alt">
+  <h2>Preguntas Frecuentes</h2>
+  <p><b>¿Entregan el mismo día?</b><br>Sí, en CDMX y alrededores si se pide antes de las 2 p.m.</p>
+  <p><b>¿Qué pagos aceptan?</b><br>Tarjeta, transferencia o efectivo.</p>
+  <p><b>¿Puedo personalizar?</b><br>Sí, cuéntanos tus ideas por WhatsApp.</p>
+</section>
+
+<!-- CONTACTO -->
+<a id="contacto"></a>
+<section class="card card-alt">
+  <h2>Contáctanos</h2>
+  <p>
+    <i class="fab fa-whatsapp" style="color:#25D366;margin-right:6px;"></i>
+    <b>WhatsApp:</b>
+    <a href="https://wa.me/525611274516" style="color:var(--clr-primary-dk)">+52 56 1127 4516</a>
+  </p>
+  <p>
+    <i class="fas fa-envelope" style="color:#c14444;margin-right:6px;"></i>
+    <b>Correo:</b>
+    contacto@galoflores.com
+  </p>
+  <p>
+    <i class="fab fa-facebook" style="color:#4267B2;margin-right:6px;"></i>
+    <b>Facebook:</b>
+    Galo Arreglos Florales
+  </p>
+  <p>
+    <i class="fab fa-instagram" style="color:#C13584;margin-right:6px;"></i>
+    <b>Instagram:</b>
+    @floral_designs_galo
+  </p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2025 GALO | Todos los derechos reservados
+</footer>
+
+</body>
+</html>

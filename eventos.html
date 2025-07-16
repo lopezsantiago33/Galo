@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Eventos - GALO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #fafafa;
+      padding: 20px;
+      text-align: center;
+      color: #2e2e2e;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      color: #b17f50;
+      margin-bottom: 30px;
+    }
+    .catalogo {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 32px;
+      margin-top: 30px;
+    }
+    .item {
+      width: 260px;
+      margin-bottom: 30px;
+    }
+    .item img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.25s ease;
+    }
+    .item img:hover {
+      transform: scale(1.05);
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      color: #222;
+      margin: 10px 0 5px;
+      font-size: 1.2em;
+    }
+    h3 {
+      color: #666;
+      margin: 0;
+      font-size: 1em;
+    }
+    .boton-regreso {
+      display: inline-block;
+      margin-bottom: 25px;
+      padding: 10px 18px;
+      background: #d4a373;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+    .boton-regreso:hover {
+      background: #b17f50;
+    }
+    button {
+      margin-top: 10px;
+      padding: 8px 14px;
+      background-color: #d4a373;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #b17f50;
+    }
+    #carrito {
+      margin-top: 40px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+    #carrito h2 {
+      text-align: center;
+      color: #b17f50;
+    }
+    #carrito ul {
+      list-style: none;
+      padding: 0;
+    }
+    #carrito li {
+      padding: 6px 0;
+      border-bottom: 1px solid #ddd;
+    }
+    .pagar {
+      display: block;
+      margin: 20px auto 0;
+      padding: 10px 20px;
+      background-color: #d4a373;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      text-align: center;
+      width: fit-content;
+    }
+    .pagar:hover {
+      background-color: #b17f50;
+    }
+  </style>
+</head>
+<body>
+
+  <a class="boton-regreso" href="index.html">← Volver al inicio</a>
+  <h1>Eventos</h1>
+
+  <div class="catalogo">
+    <div class="item">
+      <img src="a1.jpg" alt="Rosmelia Natural" />
+      <h2>Rosmelia Natural</h2>
+      <h3>$700 MXN</h3>
+      <button onclick="agregarAlCarrito('Rosmelia Natural - $700 MXN')">Agregar al carrito</button>
+    </div>
+    <div class="item">
+      <img src="a2.jpg" alt="Rosmelia Pintada" />
+      <h2>Rosmelia Pintada</h2>
+      <h3>$800 MXN</h3>
+      <button onclick="agregarAlCarrito('Rosmelia Pintada - $800 MXN')">Agregar al carrito</button>
+    </div>
+    <div class="item">
+      <img src="coche.jpg" alt="Decoración de Coche" />
+      <h2>Decoración de Coche</h2>
+      <h3>Desde $1,500 MXN</h3>
+      <button onclick="agregarAlCarrito('Decoración de Coche - Desde $1,500 MXN')">Agregar al carrito</button>
+    </div>
+    <div class="item">
+      <img src="gotico.jpg" alt="Arreglo Gótico" />
+      <h2>Arreglo Gótico</h2>
+      <h3>Desde $1,500 MXN</h3>
+      <button onclick="agregarAlCarrito('Arreglo Gótico - Desde $1,500 MXN')">Agregar al carrito</button>
+    </div>
+    <div class="item">
+      <img src="eventog.jpg" alt="Mesa de Herradura" />
+      <h2>Mesa de Herradura</h2>
+      <h3>Desde $15,000 MXN</h3>
+      <button onclick="agregarAlCarrito('Mesa de Herradura - Desde $15,000 MXN')">Agregar al carrito</button>
+    </div>
+  </div>
+
+  <div id="carrito">
+    <h2>Carrito de Compras</h2>
+    <ul id="lista-carrito"></ul>
+    <a class="pagar" href="pago.html">Finalizar pedido</a>
+  </div>
+
+  <script>
+    function agregarAlCarrito(producto) {
+      const lista = document.getElementById('lista-carrito');
+      const li = document.createElement('li');
+      li.textContent = producto;
+      lista.appendChild(li);
+    }
+  </script>
+
+</body>
+</html>
